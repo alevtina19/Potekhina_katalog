@@ -1,0 +1,36 @@
+﻿<Window x:Class="Potekhina_katalog.ADDMemes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Potekhina_katalog"
+        mc:Ignorable="d"
+        Title="ADDMemes" Height="300" Width="450" Background="#DDA0DD">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="217*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Путь к файлу" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top" Width="84" FontFamily="Arial"/>
+        <Button x:Name="vibor_images" Content="Выбрать файл" HorizontalAlignment="Left" Click="ChooseFileClick" Margin="24,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.094,-0.212" Width="120" FontWeight="Normal" FontFamily="Arial" Grid.ColumnSpan="3" Grid.Column="1" Height="25" Background="#EE82EE"/>
+        <Label Content="Название" HorizontalAlignment="Center" Margin="0,107,0,0" VerticalAlignment="Top" Width="72" FontFamily="Arial"/>
+        <TextBox HorizontalAlignment="Left" Margin="24,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Arial" Name="title" TextChanged="memeTitle_changed" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Label Content="Выбрать категорию" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.149,-0.114" Width="123" FontFamily="Arial" Grid.ColumnSpan="2"/>
+        <ComboBox HorizontalAlignment="Left" Margin="24,162,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CategorySelected" Name="categories_filter" Grid.ColumnSpan="3" Grid.Column="1">
+            <ComboBoxItem Name="seleceted_gifs">
+                <Label Content="PROGRAMMER"></Label>
+            </ComboBoxItem>
+            <ComboBoxItem  Name="seleceted_memes">
+                <Label Content="STUDIES"></Label>
+            </ComboBoxItem>
+            <ComboBoxItem Name="seleceted_stic">
+                <Label Content="BRAIN"></Label>
+            </ComboBoxItem>
+        </ComboBox>
+        <Button Content="Добавить мем" HorizontalAlignment="Left" Margin="122,225,0,0" VerticalAlignment="Top" FontFamily="Arial" Height="33" RenderTransformOrigin="0.5,0.5" Width="102" Grid.Column="3" Background="Red" Click="Button_Click"/>
+        <Label Content="URL:" HorizontalAlignment="Left" Margin="64,21,0,0" VerticalAlignment="Top" Width="37" Grid.Column="3"/>
+        <TextBox HorizontalAlignment="Left" Margin="106,25,0,0" TextWrapping="Wrap" Name="meme_url" VerticalAlignment="Top" Width="101" TextChanged="memeUrl_Changed" Grid.Column="3"/>
+    </Grid>
+</Window>
